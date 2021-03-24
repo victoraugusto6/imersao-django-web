@@ -1,0 +1,25 @@
+name: Test
+
+on: [push]
+
+jobs:
+  flake8_py3:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.9
+          architecture: x64
+      - name: Checkout PyTorch
+        uses: actions/checkout@master
+      - name: Install pipenv
+        run: pip install pipenv
+      - name: Install libs
+        run: pipenv install --dev
+      - name: Run flake8
+        uses: py-actions/flake8@v1
+        with:
+          checkName: 'flake8_py3'   # NOTE: this needs to be the same as the job name
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
