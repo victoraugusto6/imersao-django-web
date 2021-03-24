@@ -10,6 +10,9 @@ jobs:
       SECRET_KEY: 'aa22'
       DEBUG: True
       ALLOWED_HOSTS: localhost,127.0.0.1
+      AWS_ACCESS_KEY_ID: aaa
+      AWS_SECRET_ACCESS_KEY: bbb
+      AWS_STORAGE_BUCKET_NAME: ccc
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     runs-on: ubuntu-latest
     steps:

@@ -8,6 +8,8 @@ flake8 = "*"
 python-decouple = "*"
 gunicorn = "*"
 django = "*"
+collectfast = "*"
+django-s3-folder-storage = "*"
 
 [dev-packages]
 pytest-django = "*"
