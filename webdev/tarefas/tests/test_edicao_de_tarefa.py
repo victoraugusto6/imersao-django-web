@@ -11,8 +11,10 @@ def tarefa_pendente(db):
 
 @pytest.fixture
 def resposta_com_tarefa_pendente(client, tarefa_pendente):
-    resp = client.post(reverse('tarefas:detalhe', kwargs={'tarefa_id': tarefa_pendente.id}),
-                       data={'feita': 'true', 'nome': f'{tarefa_pendente.nome}--editada'})
+    resp = client.post(
+        reverse('tarefas:detalhe', kwargs={'tarefa_id': tarefa_pendente.id}),
+        data={'feita': 'true', 'nome': f'{tarefa_pendente.nome}--editada'}
+    )
     return resp
 
 
