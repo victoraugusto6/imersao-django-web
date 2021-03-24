@@ -4,16 +4,17 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-flake8 = "*"
 python-decouple = "*"
 gunicorn = "*"
 django = "*"
 collectfast = "*"
 django-s3-folder-storage = "*"
 dj-database-url = "*"
+psycopg2-binary = "*"
 
 [dev-packages]
 pytest-django = "*"
+flake8 = "*"
 
 [requires]
 python_version = "3.9"
