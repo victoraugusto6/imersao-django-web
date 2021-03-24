@@ -10,6 +10,7 @@ gunicorn = "*"
 django = "*"
 collectfast = "*"
 django-s3-folder-storage = "*"
+dj-database-url = "*"
 
 [dev-packages]
 pytest-django = "*"
